@@ -12,9 +12,7 @@ class GFButton: UIButton {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        // Custom code
-        
-        
+        configure()
     }
     
     required init?(coder: NSCoder) {
