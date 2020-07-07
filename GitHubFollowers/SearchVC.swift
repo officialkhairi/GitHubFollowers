@@ -41,9 +41,8 @@ class SearchVC: UIViewController {
     
     
     @objc func pushFollowerListVC() {
-        
         guard isUsernameEntered else {
-            print("No username")
+            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😃.", buttonTitle: "Ok")
             return
         }
       
@@ -51,6 +50,10 @@ class SearchVC: UIViewController {
         followerListVC.username = usernameTextField.text
         followerListVC.title    = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        usernameTextField.text = ""
     }
     
     
