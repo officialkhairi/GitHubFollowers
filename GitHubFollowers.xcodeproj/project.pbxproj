@@ -14,6 +14,7 @@
 		EF3D06AD24B4F00B0001CD11 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D06AC24B4F00B0001CD11 /* UIViewController+Ext.swift */; };
 		EF3D06B624B567680001CD11 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D06B524B567680001CD11 /* Follower.swift */; };
 		EF3D06B824B5683B0001CD11 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D06B724B5683B0001CD11 /* User.swift */; };
+		EF3D06BB24B577B40001CD11 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D06BA24B577B40001CD11 /* NetworkManager.swift */; };
 		EFEC312324B3147D00C3BD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC312224B3147D00C3BD13 /* AppDelegate.swift */; };
 		EFEC312524B3147D00C3BD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC312424B3147D00C3BD13 /* SceneDelegate.swift */; };
 		EFEC312C24B3148000C3BD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEC312B24B3148000C3BD13 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		EF3D06AC24B4F00B0001CD11 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		EF3D06B524B567680001CD11 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		EF3D06B724B5683B0001CD11 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF3D06BA24B577B40001CD11 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		EFEC311F24B3147D00C3BD13 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEC312224B3147D00C3BD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEC312424B3147D00C3BD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		EF3D06B924B577900001CD11 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EF3D06BA24B577B40001CD11 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		EFEC311624B3147D00C3BD13 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		EFEC312124B3147D00C3BD13 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				EF3D06B924B577900001CD11 /* Managers */,
 				EF3D06B424B567420001CD11 /* Model */,
 				EF3D06AE24B4F9850001CD11 /* Screens */,
 				EF3D06AF24B4F9B50001CD11 /* Custom Views */,
@@ -214,6 +225,7 @@
 				EF3D06A924B490630001CD11 /* GFBodyLabel.swift in Sources */,
 				EF3D06B624B567680001CD11 /* Follower.swift in Sources */,
 				EF3D06A724B48DB50001CD11 /* GFTitleLabel.swift in Sources */,
+				EF3D06BB24B577B40001CD11 /* NetworkManager.swift in Sources */,
 				EFEC313724B3419C00C3BD13 /* SearchVC.swift in Sources */,
 				EFEC312324B3147D00C3BD13 /* AppDelegate.swift in Sources */,
 				EFEC312524B3147D00C3BD13 /* SceneDelegate.swift in Sources */,
