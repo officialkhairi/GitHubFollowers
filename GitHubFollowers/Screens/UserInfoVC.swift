@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import SafariServices
+
+protocol UserInfoVCDelegate: class {
+    func didTapGithubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
 
 class UserInfoVC: UIViewController {
     
@@ -39,17 +45,26 @@ class UserInfoVC: UIViewController {
             
             switch result {
             case .success(let user):
-                DispatchQueue.main.async {
-                    self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
-                    self.add(childVC: GFRepoItemViC(user: user), to: self.itemViewOne)
-                    self.add(childVC: GFFollowerItemVC(user: user), to: self.itemViewTwo)
-                    self.dateLabel.text = "GitHub since \(user.createdAt.convertToDisplayFormat())"
-                }
+                DispatchQueue.main.async { self.configureUIElements(with: user) }
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something wrong went", message: error.rawValue, buttonTitle: "ok")
             }
         }
+    }
+    
+    
+    func configureUIElements(with user: User) {
+        let repoItemVC = GFRepoItemVC(user: user)
+        repoItemVC.delegate = self
+        
+        let followerItemVC = GFFollowerItemVC(user: user)
+        followerItemVC.delegate = self
+        
+        self.add(childVC: repoItemVC, to: self.itemViewOne)
+        self.add(childVC: followerItemVC, to: self.itemViewTwo)
+        self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
+        self.dateLabel.text = "GitHub since \(user.createdAt.convertToDisplayFormat())"
     }
     
     
@@ -95,4 +110,29 @@ class UserInfoVC: UIViewController {
         dismiss(animated: true)
     }
 
+}
+
+//MARK:- User info delegate
+
+extension UserInfoVC: UserInfoVCDelegate {
+    
+    func didTapGithubProfile(for user: User) {
+        guard let url = URL(string: user.htmlUrl) else {
+            presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid", buttonTitle: "Ok")
+            return
+        }
+        
+        let safariVC = SFSafariViewController(url: url)
+        safariVC.preferredControlTintColor = .systemGreen
+        present(safariVC, animated: true)
+        
+    }
+    
+    func didTapGetFollowers(for user: User) {
+        //
+    }
+    
+  
+    
+    
 }
