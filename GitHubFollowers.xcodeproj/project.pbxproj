@@ -27,6 +27,7 @@
 		EFC2BC5624C46FCB00A662D6 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC2BC5524C46FCB00A662D6 /* GFRepoItemVC.swift */; };
 		EFD690F824C6B5580007A031 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD690F724C6B5580007A031 /* PersistenceManager.swift */; };
 		EFD690FA24C6EB920007A031 /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD690F924C6EB920007A031 /* FavoriteCell.swift */; };
+		EFD690FD24C81A7A0007A031 /* GFTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD690FC24C81A7A0007A031 /* GFTabBarController.swift */; };
 		EFEC312324B3147D00C3BD13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC312224B3147D00C3BD13 /* AppDelegate.swift */; };
 		EFEC312524B3147D00C3BD13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEC312424B3147D00C3BD13 /* SceneDelegate.swift */; };
 		EFEC312C24B3148000C3BD13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFEC312B24B3148000C3BD13 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		EFC2BC5524C46FCB00A662D6 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		EFD690F724C6B5580007A031 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		EFD690F924C6EB920007A031 /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
+		EFD690FC24C81A7A0007A031 /* GFTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTabBarController.swift; sourceTree = "<group>"; };
 		EFEC311F24B3147D00C3BD13 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEC312224B3147D00C3BD13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEC312424B3147D00C3BD13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		EF3D06AF24B4F9B50001CD11 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				EFD690FB24C81A2C0007A031 /* TabBarControllers */,
 				EFEE819A24BB0C1E006495BA /* ViewControllers */,
 				EFEE819924BB0BD5006495BA /* Labels */,
 				EFEE819824BB0BC7006495BA /* ImageViews */,
@@ -182,6 +185,14 @@
 				EFC2BC5524C46FCB00A662D6 /* GFRepoItemVC.swift */,
 			);
 			path = ItemInfoVCs;
+			sourceTree = "<group>";
+		};
+		EFD690FB24C81A2C0007A031 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFD690FC24C81A7A0007A031 /* GFTabBarController.swift */,
+			);
+			path = TabBarControllers;
 			sourceTree = "<group>";
 		};
 		EFEC311624B3147D00C3BD13 = {
@@ -354,6 +365,7 @@
 				EF3D06AB24B492050001CD11 /* GFAlertVC.swift in Sources */,
 				EFD690FA24C6EB920007A031 /* FavoriteCell.swift in Sources */,
 				EFC2BC4924C2EBBD00A662D6 /* GFItemInfoView.swift in Sources */,
+				EFD690FD24C81A7A0007A031 /* GFTabBarController.swift in Sources */,
 				EF3D06C124B6F4170001CD11 /* FollowerCell.swift in Sources */,
 				EF3D06A924B490630001CD11 /* GFBodyLabel.swift in Sources */,
 				EFEE81A024BD9E26006495BA /* GFUserInfoHeaderVC.swift in Sources */,
