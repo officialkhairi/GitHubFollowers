@@ -97,7 +97,11 @@ class FollowerListVC: GFDataLoadingVC {
                 
                 if self.followers.isEmpty {
                     let message = "This user doesn't have any followers. Go follow them 😄."
-                    DispatchQueue.main.async { self.showEmptyStateView(with: message, in: self.view) }
+                    DispatchQueue.main.async {
+                        self.showEmptyStateView(with: message, in: self.view)
+                        self.navigationItem.searchController = nil
+                    }
+                    
                     return
                 }
                 
