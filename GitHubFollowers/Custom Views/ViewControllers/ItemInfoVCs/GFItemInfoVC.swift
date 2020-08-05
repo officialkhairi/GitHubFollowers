@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class GFItemInfoVC: UIViewController {
     
     let stackView = UIStackView()
@@ -16,12 +18,12 @@ class GFItemInfoVC: UIViewController {
     let actionButton = GFButton()
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate!
     
     init(user: User){
         super.init(nibName: nil, bundle: nil)
         self.user = user
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
